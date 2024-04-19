@@ -63,7 +63,7 @@
    }
    ```
 
-2. 打开 Android Studi ，点击新建 Empty Activity 项目，修改项目名、包名、项目路径等，点击完成。
+2. 打开 Android Studio ，点击新建 Empty Activity 项目，修改项目名、包名、项目路径等，点击完成。
 
 ![image-20240419153609382](anaconda的安装.assets/image-20240419153609382.png)
 
@@ -140,8 +140,6 @@ anaconda官网链接：[Unleash AI Innovation and Value | Anaconda](https://www.
 - 开始 → Anaconda3（64-bit）→ 右键点击Anaconda Prompt→ 以“管理员身份运行” ，在Anaconda Prompt中输入 conda
 
 list ，可以查看已经安装的包名和版本号。若结果可以正常显示，则说明安装成功。
-
-![image-20240419102801866](anaconda的安装.assets/image-20240419102801866.png)
 
 ![image-20240419145801192](anaconda的安装.assets/image-20240419145801192.png)
 
