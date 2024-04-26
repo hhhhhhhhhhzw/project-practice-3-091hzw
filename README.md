@@ -6,5 +6,6 @@
 
    #### 目录
 
-   1. [AndroidStudio+Anaconda+VSCode的安装与使用](https://gitee.com/hzw091/project-practice-3-091hzw/tree/master/01_AndroidStudio+Anaconda+VSCode的安装与使用)
-   2. 未完待续。。。
+   1. [AndroidStudio+Anaconda+VSCode的安装与使用](01_AndroidStudio+Anaconda+VSCode的安装与使用)
+   2. [构建第一个Kotlin应用](02_构建第一个Kotlin应用)
+   3. 未完待续。。。
