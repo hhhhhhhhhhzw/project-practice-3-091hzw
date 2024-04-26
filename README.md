@@ -5,5 +5,5 @@
 
 #### 目录
 
-1. [Android Studio、Anaconda、VSCode的安装与使用](01_Android Studio、Anaconda、VSCode的安装与使用)
+1. [AndroidStudio+Anaconda+VSCode的安装与使用](https://gitee.com/hzw091/project-practice-3-091hzw/tree/master/01_AndroidStudio+Anaconda+VSCode的安装与使用)
 2. 未完待续。。。
