@@ -469,7 +469,7 @@ binding.randomButton.setOnClickListener {
 import androidx.navigation.fragment.navArgs
 ```
 
-onViewCreated()代码之前添加一行
+onViewCreated()代码之前添加一行代码，获取传来的参数集
 
 ```kotlin
 val args: SecondFragmentArgs by navArgs()
