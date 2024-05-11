@@ -544,7 +544,7 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture)
 
 运行，尝试录像，点击开始录像后该按钮显示“Stop Capture”，再次点击即可停止录像，录像成功并保存视频，可在相册或文件浏览器中找到该视频。
 
-![image-20240511162558788](assets/image-20240511162558788.png)
+![image-20240511170330472](assets/image-20240511170330472.png)
 
 ### （7）扩展实验（尝试多种组合）
 
@@ -558,7 +558,7 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imag
 
 如图所示，运行后可在录像状态下拍照
 
-![image-20240511163416505](assets/image-20240511163416505.png)
+![image-20240511170453330](assets/image-20240511170453330.png)
 
 如果需要Preview+VideoCapture+ImageAnalysis组合就是如下代码
 
@@ -566,7 +566,7 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imag
 cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imageAnalyzer)
 ```
 
-![image-20240511163729723](assets/image-20240511163729723.png)
+![image-20240511170631452](assets/image-20240511170631452.png)
 
 如果需要Preview+VideoCapture+ImageCapture+ImageAnalysis组合就是如下代码
 
@@ -574,5 +574,5 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imag
 cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imageCapture, imageAnalyzer)
 ```
 
-![image-20240511163930087](assets/image-20240511163930087.png)
+![image-20240511170725756](assets/image-20240511170725756.png)
 
