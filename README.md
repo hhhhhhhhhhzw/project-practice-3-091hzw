@@ -8,4 +8,5 @@
 
    1. [AndroidStudio+Anaconda+VSCode的安装与使用](01_AndroidStudio+Anaconda+VSCode的安装与使用)
    2. [构建第一个Kotlin应用](02_构建第一个Kotlin应用)
-   3. 未完待续。。。
+   3. [构建CameraX应用](03_构建CameraX应用)
+   4. 未完待续。。。
