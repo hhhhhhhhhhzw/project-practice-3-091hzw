@@ -225,7 +225,7 @@ override fun onRequestPermissionsResult(requestCode: Int,
 
 运行应用，可以看到进入应用时会弹出弹出请求相关权限
 
-![image-20240511093123267](assets/image-20240511093123267.png)
+![image-20240511181322474](assets/image-20240511181322474.png)
 
 ### （3）实现Preview用例（相机预览）
 
@@ -271,7 +271,7 @@ override fun onDestroy() {
 
 运行查看效果，可以看到相机预览：
 
-![image-20240511101420546](assets/image-20240511101420546.png)
+![image-20240511181424835](assets/image-20240511181424835.png)
 
 ### （4）实现ImageCapture用例（拍照）
 
@@ -364,9 +364,9 @@ private fun takePhoto() {
 }
 ```
 
-运行效果：
+拍照成功后会存进相册里，可在相册找到该图片。运行效果：
 
-![image-20240511140437458](assets/image-20240511140437458.png)
+![image-20240511181858379](assets/image-20240511181858379.png)
 
 ### （5）实现ImageAnalysis用例（图片分析）
 
@@ -544,7 +544,7 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture)
 
 运行，尝试录像，点击开始录像后该按钮显示“Stop Capture”，再次点击即可停止录像，录像成功并保存视频，可在相册或文件浏览器中找到该视频。
 
-![image-20240511171959426](assets/image-20240511171959426.png)
+![image-20240511182128436](assets/image-20240511182128436.png)
 
 ### （7）扩展实验（尝试多种组合）
 
@@ -556,9 +556,9 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture)
 cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imageCapture)
 ```
 
-如图所示，运行后可在录像状态下拍照
+如图所示，运行后可在录像状态下拍照：
 
-![image-20240511172218016](assets/image-20240511172218016.png)
+![image-20240511183417867](assets/image-20240511183417867.png)
 
 如果需要Preview+VideoCapture+ImageAnalysis组合就是如下代码
 
@@ -566,7 +566,9 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imag
 cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imageAnalyzer)
 ```
 
-![image-20240511172327127](assets/image-20240511172327127.png)
+相机预览+录像+图像分析运行效果：
+
+![image-20240511183745116](assets/image-20240511183745116.png)
 
 如果需要Preview+VideoCapture+ImageCapture+ImageAnalysis组合就是如下代码
 
@@ -574,5 +576,6 @@ cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imag
 cameraProvider.bindToLifecycle(this, cameraSelector, preview, videoCapture, imageCapture, imageAnalyzer)
 ```
 
-![image-20240511172407140](assets/image-20240511172407140.png)
+相机预览+录像+拍照+图像分析运行效果：
 
+![image-20240511184051020](assets/image-20240511184051020.png)
