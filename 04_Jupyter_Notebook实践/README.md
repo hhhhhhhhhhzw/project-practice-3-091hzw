@@ -66,7 +66,7 @@ print("Hello, Notebook!")
 ```
 
     Hello, Notebook!
-    
+
 
 代码执行之后，cell左侧的标签从[ ]变成了[1]。[]中的数字代表kernel执行的顺序，而[*]则表示代码cell正在执行代码。
 
@@ -120,7 +120,7 @@ print('%d squared is %d' % (x, y))
 ```
 
     4 squared is 16
-    
+
 
 ## 二、简单python程序例子——选择排序算法
 
@@ -160,7 +160,7 @@ test()
 
     原始数组： [2, 7, 12, 1, 3, 11, 6, 9]
     排序后的数组： [1, 2, 3, 6, 7, 9, 11, 12]
-    
+
 
 ## 三、进行数据分析
 
@@ -183,7 +183,6 @@ pandas用于数据处理，matplotlib用于绘图，seaborn使绘图更美观。
 
 ```python
 df = pd.read_csv('fortune500.csv')
-
 ```
 
 ### 2 检查数据集
@@ -194,26 +193,8 @@ df = pd.read_csv('fortune500.csv')
 
 ```python
 df.head(3)
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -252,33 +233,11 @@ df.head(3)
     </tr>
   </tbody>
 </table>
-</div>
-
-
-
 
 ```python
 df.head()
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -333,35 +292,13 @@ df.head()
     </tr>
   </tbody>
 </table>
-</div>
-
-
-
 调用df.tail(n)可以查看数据表的后n行，如果n未指定，则默认为5。
 
 
 ```python
 df.tail(4)
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -408,33 +345,11 @@ df.tail(4)
     </tr>
   </tbody>
 </table>
-</div>
-
-
-
 
 ```python
 df.tail()
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -489,16 +404,11 @@ df.tail()
     </tr>
   </tbody>
 </table>
-</div>
-
-
-
 现在我们对数据属性列进行重命名，以便在后续访问。
 
 
 ```python
 df.columns = ['year', 'rank', 'company', 'revenue', 'profit']
-
 ```
 
 接下来，调用len()检查数据条目是否加载完整。从1955至2055年总共有25500条目录。
@@ -506,25 +416,17 @@ df.columns = ['year', 'rank', 'company', 'revenue', 'profit']
 
 ```python
 len(df)
-
 ```
 
 
-
-
     25500
-
-
 
 然后，我们调用df.dtypes检查属性列的类型。
 
 
 ```python
 df.dtypes
-
 ```
-
-
 
 
     year         int64
@@ -534,34 +436,14 @@ df.dtypes
     profit      object
     dtype: object
 
-
-
 对于profit属性，我们期望的是float类型，因此其可能包含非数字的值，现在我们利用正则表达式进行检查并输出前5条数据。
 
 
 ```python
 non_numberic_profits = df.profit.str.contains('[^0-9.-]')
 df.loc[non_numberic_profits].head()
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -616,37 +498,27 @@ df.loc[non_numberic_profits].head()
     </tr>
   </tbody>
 </table>
-</div>
-
-
-
 发现确实存在profit这一列为字符串的记录，利用len()统计一下总共存在多少条这样的记录。
 
 
 ```python
 len(df.profit[non_numberic_profits])
-
 ```
 
 
-
-
     369
-
-
 
 统计出总共有369条是profit列包含非数字的记录，我们可以使用直方图来直观展示按照年份的分布情况。
 
 
 ```python
 bin_sizes, _, _ = plt.hist(df.year[non_numberic_profits], bins=range(1955, 2006))
-
 ```
 
 
-    
+​    
 ![png](assets/output_47_0.png)
-    
+​    
 
 
 可见，单独年份这样的记录数都少于25条，即少于4%的比例。这在可以接受的范围内，因此删除这些记录。
@@ -655,7 +527,6 @@ bin_sizes, _, _ = plt.hist(df.year[non_numberic_profits], bins=range(1955, 2006)
 ```python
 df = df.loc[~non_numberic_profits]
 df.profit = df.profit.apply(pd.to_numeric)
-
 ```
 
 再次检查数据记录的条目数以及各属性列的类型。
@@ -663,23 +534,15 @@ df.profit = df.profit.apply(pd.to_numeric)
 
 ```python
 len(df)
-
 ```
-
-
 
 
     25131
 
 
-
-
 ```python
 df.dtypes
-
 ```
-
-
 
 
     year         int64
@@ -688,8 +551,6 @@ df.dtypes
     revenue    float64
     profit     float64
     dtype: object
-
-
 
 profit的类型现在变为了float64，上述操作已经达到清洗无效数据记录的效果。
 
@@ -707,7 +568,6 @@ def plot(x, y, ax, title, y_label):
     ax.set_ylabel(y_label)
     ax.plot(x, y)
     ax.margins(x=0, y=0)
-    
 ```
 
 开始绘图。
@@ -716,13 +576,12 @@ def plot(x, y, ax, title, y_label):
 ```python
 fig, ax = plt.subplots()
 plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2005', 'Profit (millions)')
-
 ```
 
 
-    
+​    
 ![png](assets/output_57_0.png)
-    
+​    
 
 
 看起来像指数增长，但是1990年代初期出现急剧下滑，对应当时经济衰退和网络泡沫。再来看看收入曲线。
@@ -732,13 +591,12 @@ plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2005'
 y2 = avgs.revenue
 fig, ax = plt.subplots()
 plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2005', 'Revenue (millions)')
-
 ```
 
 
-    
+​    
 ![png](assets/output_59_0.png)
-    
+​    
 
 
 公司收入曲线并没有出现急剧下降，可能是由于财务会计的处理。对数据结果进行标准差处理。
@@ -756,13 +614,12 @@ plot_with_std(x, y1.values, stds1, ax1, title % 'profits', 'Profit (millions)')
 plot_with_std(x, y2.values, stds2, ax2, title % 'revenues', 'Revenue (millions)')
 fig.set_size_inches(14, 4)
 fig.tight_layout()
-
 ```
 
 
-    
+​    
 ![png](assets/output_61_0.png)
-    
+​    
 
 
 可见，不同公司之间的收入和利润差距惊人，那么到底前10%和后10%的公司谁的波动更大了？此外，还有很多有价值的信息值得进一步挖掘。
