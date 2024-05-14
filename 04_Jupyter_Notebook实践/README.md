@@ -23,7 +23,7 @@
 
 ![image-20240514110634501](assets/image-20240514110634501.png)
 
-然后就可以在cell中愉快地敲代码了
+然后就可以在cell中愉快地敲代码咯
 
 ![image-20240514114913506](assets/image-20240514114913506.png)
 
@@ -42,7 +42,7 @@
 
 ![image-20240514120200254](assets/image-20240514120200254.png)
 
-配置好这些后就能写代码了。
+配置好这些后就能写代码啦
 
 ![image-20240514120358042](assets/image-20240514120358042.png)
 
@@ -196,6 +196,8 @@ df.head(3)
 ```
 
 
+
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -251,9 +253,13 @@ df.head(3)
 </div>
 
 
+
+
 ```python
 df.head()
 ```
+
+
 
 
 <div>
@@ -270,7 +276,6 @@ df.head()
         text-align: right;
     }
 </style>
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -327,12 +332,16 @@ df.head()
 </table>
 </div>
 
+
+
 调用df.tail(n)可以查看数据表的后n行，如果n未指定，则默认为5。
 
 
 ```python
 df.tail(4)
 ```
+
+
 
 
 <div>
@@ -398,9 +407,13 @@ df.tail(4)
 </div>
 
 
+
+
 ```python
 df.tail()
 ```
+
+
 
 
 <div>
@@ -473,6 +486,8 @@ df.tail()
 </table>
 </div>
 
+
+
 现在我们对数据属性列进行重命名，以便在后续访问。
 
 
@@ -488,7 +503,11 @@ len(df)
 ```
 
 
+
+
     25500
+
+
 
 然后，我们调用df.dtypes检查属性列的类型。
 
@@ -498,12 +517,16 @@ df.dtypes
 ```
 
 
+
+
     year         int64
     rank         int64
     company     object
     revenue    float64
     profit      object
     dtype: object
+
+
 
 对于profit属性，我们期望的是float类型，因此其可能包含非数字的值，现在我们利用正则表达式进行检查并输出前5条数据。
 
@@ -512,6 +535,8 @@ df.dtypes
 non_numberic_profits = df.profit.str.contains('[^0-9.-]')
 df.loc[non_numberic_profits].head()
 ```
+
+
 
 
 <div>
@@ -584,6 +609,8 @@ df.loc[non_numberic_profits].head()
 </table>
 </div>
 
+
+
 发现确实存在profit这一列为字符串的记录，利用len()统计一下总共存在多少条这样的记录。
 
 
@@ -592,7 +619,11 @@ len(df.profit[non_numberic_profits])
 ```
 
 
+
+
     369
+
+
 
 统计出总共有369条是profit列包含非数字的记录，我们可以使用直方图来直观展示按照年份的分布情况。
 
@@ -601,7 +632,10 @@ len(df.profit[non_numberic_profits])
 bin_sizes, _, _ = plt.hist(df.year[non_numberic_profits], bins=range(1955, 2006))
 ```
 
-![png](assets/output_47_0.png)    
+
+​    
+![png](assets/output_47_0.png)
+​    
 
 
 可见，单独年份这样的记录数都少于25条，即少于4%的比例。这在可以接受的范围内，因此删除这些记录。
@@ -620,12 +654,18 @@ len(df)
 ```
 
 
+
+
     25131
+
+
 
 
 ```python
 df.dtypes
 ```
+
+
 
 
     year         int64
@@ -634,6 +674,8 @@ df.dtypes
     revenue    float64
     profit     float64
     dtype: object
+
+
 
 profit的类型现在变为了float64，上述操作已经达到清洗无效数据记录的效果。
 
@@ -697,5 +739,9 @@ fig.set_size_inches(14, 4)
 fig.tight_layout()
 ```
 
+
 ![png](assets/output_61_0.png)
+    
+
+
 可见，不同公司之间的收入和利润差距惊人，那么到底前10%和后10%的公司谁的波动更大了？此外，还有很多有价值的信息值得进一步挖掘。
