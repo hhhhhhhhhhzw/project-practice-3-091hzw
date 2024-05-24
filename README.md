@@ -10,4 +10,5 @@
    2. [构建第一个Kotlin应用](02_构建第一个Kotlin应用)
    3. [构建CameraX应用](03_构建CameraX应用)
    4. [Jupyter_Notebook实践](04_Jupyter_Notebook实践)
-   5. 未完待续。。。
+   5. [实现基本的图像分类APP](05_实现基本的图像分类APP)
+   6. 未完待续。。。
