@@ -12,4 +12,5 @@
    4. [Jupyter_Notebook实践](04_Jupyter_Notebook实践)
    5. [实现基本的图像分类APP](05_实现基本的图像分类APP)
    6. [TensorFlowLite模型生成](06_TensorFlowLite模型生成)
-   7. 未完待续。。。
+   7. [TensorFlow石头剪刀布模型生成](07_TensorFlow石头剪刀布模型生成)
+   8. 未完待续。。。
