@@ -6,9 +6,9 @@
 ## 预备工作
 我们在Github的[Codespaces](https://github.com/codespaces)中创建一个新的notebook，选择Python 3.8，然后输入如下代码安装程序运行必备的一些库。这里代码开头的“!”感叹号是告诉notebook把这一行的pip安装指令当做shell指令执行。
 
-![image-20240607102944696](assets/image-20240607102944696.png)
+<img src="assets/image-20240607102944696.png" alt="image-20240607102944696" style="zoom:36%;" />
 
-![image-20240607103246361](assets/image-20240607103246361.png)
+<img src="assets/image-20240607103246361.png" alt="image-20240607103246361" style="zoom:50%;" />
 
 
 ```python
@@ -627,16 +627,16 @@ model.export(export_dir='.')
 
 这里导出的Tensorflow Lite模型包含了元数据(metadata),其能够提供标准的模型描述。导出的模型存放在Jupyter Notebook当前的工作目录中。我们把它下载到本地。
 
-![image-20240531165625851](assets/image-20240531165625851.png)
+<img src="assets/image-20240531165625851.png" alt="image-20240531165625851" style="zoom:80%;" />
 
 然后重命名model.tflite为FlowerModel.tflite，然后打开上次的花卉识别项目，把FlowerModel.tflite放到ml目录中替换掉原有的模型。
 
-![image-20240531170622572](assets/image-20240531170622572.png)
+<img src="assets/image-20240531170622572.png" alt="image-20240531170622572" style="zoom:90%;" />
 
-![image-20240531170800520](assets/image-20240531170800520.png)
+<img src="assets/image-20240531170800520.png" alt="image-20240531170800520" style="zoom:50%;" />
 
 ## 运行结果
 
 在真机上运行start项目，运行结果如下，可以看到运行正常，也能够识别出相应的花种。
 
-![image-20240531171149534](assets/image-20240531171149534.png)
+<img src="assets/image-20240531171149534.png" alt="image-20240531171149534" style="zoom:60%;" />
