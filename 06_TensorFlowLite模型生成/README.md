@@ -397,7 +397,7 @@
         Uninstalling packaging-24.0:
           Successfully uninstalled packaging-24.0
     Successfully installed CFFI-1.16.0 Cython-3.0.10 MarkupSafe-2.1.5 PyYAML-6.0.1 absl-py-1.4.0 array-record-0.4.0 astunparse-1.6.3 attrs-23.2.0 audioread-3.0.1 bleach-6.1.0 cachetools-5.3.3 certifi-2024.2.2 charset-normalizer-3.3.2 click-8.1.7 cycler-0.12.1 dataclasses-0.6 dm-tree-0.1.8 etils-1.3.0 fire-0.6.0 flatbuffers-24.3.25 gast-0.5.4 gin-config-0.5.0 google-api-core-2.19.0 google-api-python-client-2.131.0 google-auth-2.29.0 google-auth-httplib2-0.2.0 google-auth-oauthlib-0.4.6 google-cloud-bigquery-3.23.1 google-cloud-core-2.4.1 google-crc32c-1.5.0 google-pasta-0.2.0 google-resumable-media-2.7.0 googleapis-common-protos-1.63.0 grpcio-1.64.0 grpcio-status-1.48.2 h5py-3.11.0 httplib2-0.22.0 idna-3.7 importlib-resources-6.4.0 joblib-1.4.2 kaggle-1.6.14 keras-2.8.0 keras-preprocessing-1.1.2 kiwisolver-1.4.5 libclang-18.1.1 librosa-0.8.1 llvmlite-0.41.1 lxml-5.2.2 markdown-3.6 matplotlib-3.4.3 neural-structured-learning-1.4.0 numba-0.58.1 numpy-1.23.3 oauthlib-3.2.2 opencv-python-headless-4.9.0.80 opt-einsum-3.3.0 packaging-20.9 pandas-2.0.3 pillow-10.3.0 pooch-1.8.1 promise-2.3 proto-plus-1.23.0 protobuf-3.19.6 py-cpuinfo-9.0.0 pyasn1-0.6.0 pyasn1-modules-0.4.0 pybind11-2.12.0 pycparser-2.22 pyparsing-3.1.2 python-slugify-8.0.4 pytz-2024.1 requests-2.32.3 requests-oauthlib-2.0.0 resampy-0.4.3 rsa-4.9 scann-1.2.6 scikit-learn-1.3.2 scipy-1.10.1 sentencepiece-0.2.0 setuptools-70.0.0 sounddevice-0.4.7 soundfile-0.12.1 tensorboard-2.8.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.8.4 tensorflow-addons-0.21.0 tensorflow-datasets-4.9.0 tensorflow-estimator-2.8.0 tensorflow-hub-0.12.0 tensorflow-io-gcs-filesystem-0.34.0 tensorflow-metadata-1.13.0 tensorflow-model-optimization-0.8.0 tensorflowjs-3.18.0 termcolor-2.4.0 text-unidecode-1.3 tf-models-official-2.3.0 tf-slim-1.1.0 tflite-model-maker-0.4.3 tflite-support-0.4.3 threadpoolctl-3.5.0 toml-0.10.2 tqdm-4.66.4 typeguard-2.13.3 tzdata-2024.1 uritemplate-4.1.1 urllib3-1.25.11 webencodings-0.5.1 werkzeug-3.0.3 wheel-0.43.0 wrapt-1.16.0
-    
+
 
 接下来，导入相关的库，如os、numpy、tensorflow等。
 
@@ -432,7 +432,7 @@ import matplotlib.pyplot as plt
     libusb-1.0-0 is already the newest version (2:1.0.23-2build1).
     libusb-1.0-0-dev is already the newest version (2:1.0.23-2build1).
     0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
-    
+
 
 如果要我们升级ipywidgets，我们运行如下代码，然后再重新运行前面的导包操作。
 
@@ -476,7 +476,7 @@ import matplotlib.pyplot as plt
     [?25hInstalling collected packages: widgetsnbextension, jupyterlab-widgets, ipywidgets
     Successfully installed ipywidgets-8.1.3 jupyterlab-widgets-3.0.11 widgetsnbextension-4.0.11
     Note: you may need to restart the kernel to use updated packages.
-    
+
 
 ## 模型训练
 
@@ -497,7 +497,7 @@ image_path = os.path.join(os.path.dirname(image_path), 'flower_photos')
     Downloading data from https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
     228818944/228813984 [==============================] - 1s 0us/step
     228827136/228813984 [==============================] - 1s 0us/step
-    
+
 
 ### 运行示例
 一共需4步完成。
@@ -511,14 +511,14 @@ train_data, test_data = data.split(0.9)
 ```
 
     INFO:tensorflow:Load image with size: 3670, num_label: 5, labels: daisy, dandelion, roses, sunflowers, tulips.
-    
+
 
     2024-05-31 08:37:32.794436: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /workspaces/project-practice-3-091hzw/06_TensorFlow Lite 模型生成/.venv/lib/python3.8/site-packages/cv2/../../lib64:
     2024-05-31 08:37:32.794468: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
     2024-05-31 08:37:32.794488: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (codespaces-975054): /proc/driver/nvidia/version does not exist
     2024-05-31 08:37:32.794746: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
     To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-    
+
 
 第二步：训练Tensorflow模型
 
@@ -546,14 +546,14 @@ model = image_classifier.create(train_data)
     _________________________________________________________________
     None
     Epoch 1/5
-    
+
 
     2024-05-31 08:38:23.130357: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 51380224 exceeds 10% of free system memory.
     2024-05-31 08:38:23.256218: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 51380224 exceeds 10% of free system memory.
     2024-05-31 08:38:23.313922: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 51380224 exceeds 10% of free system memory.
     2024-05-31 08:38:23.341011: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 154140672 exceeds 10% of free system memory.
     2024-05-31 08:38:23.420760: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 57802752 exceeds 10% of free system memory.
-    
+
 
     103/103 [==============================] - 55s 520ms/step - loss: 0.8602 - accuracy: 0.7819
     Epoch 2/5
@@ -564,7 +564,7 @@ model = image_classifier.create(train_data)
     103/103 [==============================] - 54s 524ms/step - loss: 0.6018 - accuracy: 0.9245
     Epoch 5/5
     103/103 [==============================] - 54s 519ms/step - loss: 0.5876 - accuracy: 0.9302
-    
+
 
 第三步：评估模型
 
@@ -574,7 +574,7 @@ loss, accuracy = model.evaluate(test_data)
 ```
 
     12/12 [==============================] - 8s 488ms/step - loss: 0.6290 - accuracy: 0.9128
-    
+
 
 第四步，导出Tensorflow Lite模型
 
@@ -584,10 +584,10 @@ model.export(export_dir='.')
 ```
 
     2024-05-31 08:44:11.416770: W tensorflow/python/util/util.cc:368] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
-    
+
 
     INFO:tensorflow:Assets written to: /tmp/tmps007tmt9/assets
-    
+
 
     INFO:tensorflow:Assets written to: /tmp/tmps007tmt9/assets
     2024-05-31 08:44:15.261460: I tensorflow/core/grappler/devices.cc:66] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0
@@ -600,26 +600,26 @@ model.export(export_dir='.')
       warnings.warn("Statistics for quantized inputs were expected, but not "
     2024-05-31 08:44:16.177337: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:357] Ignored output_format.
     2024-05-31 08:44:16.177389: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:360] Ignored drop_control_dependency.
-    
+
 
     INFO:tensorflow:Label file is inside the TFLite model with metadata.
-    
+
 
     fully_quantize: 0, inference_type: 6, input_inference_type: 3, output_inference_type: 3
     INFO:tensorflow:Label file is inside the TFLite model with metadata.
-    
+
 
     INFO:tensorflow:Saving labels in /tmp/tmpm7swx0yu/labels.txt
-    
+
 
     INFO:tensorflow:Saving labels in /tmp/tmpm7swx0yu/labels.txt
-    
+
 
     INFO:tensorflow:TensorFlow Lite model exported successfully: ./model.tflite
-    
+
 
     INFO:tensorflow:TensorFlow Lite model exported successfully: ./model.tflite
-    
+
 
 这里导出的Tensorflow Lite模型包含了元数据(metadata),其能够提供标准的模型描述。导出的模型存放在Jupyter Notebook当前的工作目录中。我们把它下载到本地。
 
@@ -631,6 +631,8 @@ model.export(export_dir='.')
 
 ![image-20240531170800520](assets/image-20240531170800520.png)
 
-然后在物理机上运行start项目，运行结果如下，可以看到运行正常，也能够识别出相应的花种
+## 运行结果
+
+在真机上运行start项目，运行结果如下，可以看到运行正常，也能够识别出相应的花种。
 
 ![image-20240531171149534](assets/image-20240531171149534.png)
