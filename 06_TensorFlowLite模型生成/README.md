@@ -4,7 +4,11 @@
 
 
 ## 预备工作
-我们在Github的Codespace中创建一个新的notebook，选择Python 3.8，然后输入如下代码安装程序运行必备的一些库。这里代码开头的“!”感叹号是告诉notebook把这一行的pip安装指令当做shell指令执行。
+我们在Github的[Codespaces](https://github.com/codespaces)中创建一个新的notebook，选择Python 3.8，然后输入如下代码安装程序运行必备的一些库。这里代码开头的“!”感叹号是告诉notebook把这一行的pip安装指令当做shell指令执行。
+
+![image-20240607102944696](assets/image-20240607102944696.png)
+
+![image-20240607103246361](assets/image-20240607103246361.png)
 
 
 ```python
